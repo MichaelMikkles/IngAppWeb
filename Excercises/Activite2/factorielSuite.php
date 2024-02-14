@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport"
         content="width=device-width">
-        <title>Réception de paramètres dans l'URL</title>
+        <title>Réception de paramètres dans Formulaire</title>
     </head>
     <body>
         <a href="factorielSuite.php?number=3">Dis-moi le factoriel !</a>
