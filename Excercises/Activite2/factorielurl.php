@@ -4,18 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport"
         content="width=device-width">
-        <title>Réception de paramètres
-        dans l'URL</title>
+        <title>Réception de paramètres dans l'URL</title>
     </head>
     <body>
-    <a href="factorielurl.php?number=3">Dis-moi le factoriel !</a>
+        <a href="factorielurl.php?number=3">Dis-moi le factoriel !</a>
         <p>
             <?php
-            if (isset($_GET['number']) && $_GET['number'] > 0)
-            echo 'Le factoriel ' .
-            $_GET['number'] . ' est: ';
+            if (isset($_GET['number']) && $_GET['number'] > 0){
+                $number = $_GET['number'];
+                echo 'Le factoriel ' . $_GET['number'] . ' est: ';
+                echo calculerFactoriel($number);
+            }
+                
             else
-            echo 'Il faut renseigner un numero plus grand que cero!';
+                echo 'Il faut renseigner un numero plus grand que cero!';
+            function calculerFactoriel($number){
+
+                if (($number == 0) or ($number == 1)){
+                    return 1;
+                } else{
+                    return ($number * calculerFactoriel($number - 1));
+                }
+            }
             ?> 
         </p>
     </body>
