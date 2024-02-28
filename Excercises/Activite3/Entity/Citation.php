@@ -11,4 +11,16 @@ class Citation{
         $this->auteur = $auteur;
         $this->date = $date;
     }
+
+    public function getCite(): String{
+        return $this->cite;
+    }
+
+    public function getAuteur(): Auteur{
+        return $this->auteur;
+    }
+
+    public function getDate(): String{
+        return $this->date;
+    }
 }
